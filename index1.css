@@ -1,0 +1,347 @@
+/*
+selector (class and id) : The particular Set of rules that apply for which element
+                          if selector is h5, then the rules are apply for all the h5 tag in the HTML file.
+                          
+                          SIMPLE SELECTOR
+                            -> tag selector eg: h1{}
+                            -> id selector syntex #id_name{} (id name should be unique)
+                            -> class selector syntex .class_name{}
+                                (selector name should not be unique.
+                                to select a particular tag which has the same names use the syntax 
+                                "tag_name.class_name{}".
+                            -> Universal selector syntax *{}.
+                            -> Grouping selector syntax tag_name, .class_name, #id_name{}
+
+- the above is the "diclaration" block
+- each one has the "property" eg. color: and "value" eg. red 
+*/
+/* inline css is the style that writtern in the particular tag itself (element.style).
+   internal css is the style that writtern in the <style></style> in the head tag 
+   external css is the style that writtern in the external file named as file_name.css
+   */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* body{
+    background-image: url(WP\ Dark\ Blue.jpg);
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-attachment: scroll;
+} */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: brown;
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 5px;
+    position: sticky;
+    /* color: #ffffff;
+    color: hsl(31, 54, 65, 0.4); the last value is the opacity
+    color: rgb(red, green, blue, 0.5); the last value is the opacity*/
+}
+.h1{
+    border-style: solid;
+    /* border-style: top, right, bottom, left; "this is the pattern (take clock wise)" */
+    border-width: 5px; /*thin, thick and medium*/
+    border-radius: 10px; /*border-radius: 5px 5px 5px 5px; */
+    /* border-color: red yellow; */
+    /* max-width: 100px;
+    min-width: none;
+    max-height: none;
+    min-height: auto; */
+    border-color: black;
+    height: auto;
+    width: auto;
+    padding-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.div1{
+    /* 
+    color: white;
+    background-image: url(WP\ Dark\ Blue.jpg);
+    text-decoration:underline;
+    text-decoration-color: red;
+    text-transform: none;
+    text-shadow: 0px 2px 5px;
+    word-spacing: 3px;
+    line-height: 25px; 
+    font-variant: small-caps;
+    1em = 16px
+    */
+    height: 130px; 
+    width: 500px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+.div1:hover{
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray;
+}
+
+.ul{
+    display: flex;
+    justify-content: space-between;
+}
+.table, td, th{
+    border: 1px solid;
+    width: 500px;
+    border-collapse: collapse;
+}
+thead th, td{
+    text-align:center;
+}
+tr:hover{
+    background-color: red;
+    color:orange;
+    cursor:default;
+}
+.table:hover{
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray;
+}
+.content {
+    padding-left: 2px;
+    text-align: justify;
+    border:2px solid;
+    border-color:red;
+    height: 75px;
+    width: 410px;
+    opacity: 0.7; /*value: 0-1*/
+    border-radius: 20px;
+    overflow: auto;
+}
+.para{
+    background-color: yellow;
+    border-radius: 20px;
+}
+.position1{
+    height: 50px;
+    width: 50px;
+    border: 2px solid; /*first border and then border color */
+    border-color: red;
+    background-color: black;
+    position: relative; /*static is defauld*/
+    left: 50px;
+}
+.position2{
+    height: 50px;
+    width: 50px;
+    border: 2px solid; /*first border and then border color */
+    border-color: red;
+    background-color: black;
+    /* position: absolute;
+    left: 60px; */
+
+}
+.position3{
+    height: 50px;
+    width: 50px;
+    border: 2px solid; /*first border and then border color */
+    border-color: red;
+    background-color: black;
+    position: sticky;
+}
+.position4{
+    height: 50px;
+    width: 50px;
+    border: 2px solid; /*first border and then border color */
+    border-color: red;
+    background-color: black;
+    /* position: fixed; */
+}
+
+.div-container{
+    height: 800px;
+    width: 600px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+}
+.div-1{
+    width:400px;
+    height: 200px;
+    background-color: rebeccapurple;
+    text-align: center;
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray ;
+}
+.div-2{
+    width:200px;
+    height: 100px;
+    background-color: beige;
+    text-align: center;
+    position: relative;
+    left: 400px;
+    bottom: 200px;
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray ;
+}
+.div-3{
+    width:100px;
+    height: 100px;
+    background-color: tan;
+    text-align: center;
+    position: relative;
+    left: 400px;
+    bottom: 200px;
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray ;
+}
+.div-4{
+    width:100px;
+    height: 100px;
+    background-color: honeydew;
+    text-align: center;
+    position: relative;
+    left: 500px;
+    bottom: 300px;
+    box-shadow: 0px 5px 5px 0px gray, 0px 5px 5px 0px gray ;
+}
+.div-1:hover, .div-2:hover, .div-3:hover, .div-4:hover{
+    box-shadow: 0px 5px 5px 0px black, 0px 5px 5px 0px black ;
+}
+
+.image1{
+    width: 600px;
+    height: 600px;
+    background: url(https://images.pexels.com/photos/19577082/pexels-photo-19577082/free-photo-of-city-skyline-at-dusk.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load) no-repeat center;
+    background-size: cover;
+}
+
+.cointainer{
+    border: 5px solid black;
+}
+.flex-item{
+    columns: white;
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+}
+
+.box-1{ background-color: red;}
+.box-2{ background-color: yellow;}
+.box-3{ background-color: gray;}
+.box-4{ background-color: green;}
+.box-5{ background-color: pink;}
+.box-6{ background-color: black;}
+.box-7{ background-color: blue;}
+.box-8{ background-color: violet;}
+.box-9{ background-color: skyblue;}
+
+.cointainer{
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px 10px; /*row-gap column-gap*/
+    /* column-gap: 20px;
+    row-gap: 20px; */
+/* flex-flow: row wrap; "It's combination of flex-direction and flex-wrap"*/
+}
+
+.grid-demo{
+    width: 100vw;
+    height: 500px;
+    border: 5px solid black;
+    color: black;
+    display: grid;
+    margin: 3px;
+    grid-template-areas: 
+     'nav nav nav'
+     'head head head'
+     'sidebar main-content main-content'
+     'aside-1 aside-2 aside-3'
+     'footer footer footer'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20px 2fr 4fr 4fr 20px;
+}
+.grid-box-1,.grid-box-2, .grid-box-3,.grid-box-4,.grid-box-5,.grid-box-6,.grid-box-7,.grid-box-8{
+    border: 1px solid black;
+}
+.grid-box-1{
+    background-color: #fefcdb;
+    grid-area: nav;
+}
+.grid-box-2{
+    background-color: #ffe1fe;
+    grid-area: head;
+}
+.grid-box-3{
+    background-color: #dcddfd;
+    grid-area: sidebar;
+}
+.grid-box-4{
+    background-color: #d8fafd;
+    grid-area: main-content;
+}
+.grid-box-5{
+    background-color: #d5bbb7;
+    grid-area: aside-1;
+}
+.grid-box-6{
+    background-color: #b4d0b7;
+    grid-area: aside-2;
+}
+.grid-box-7{
+    background-color: #b7b7d2;
+    grid-area: aside-3;
+}
+.grid-box-8{
+    background-color: #a5a5a5;
+    grid-area: footer;
+}
+/* Media quires for all devices */
+/* Extra small devices (phones) */  
+@media screen and (max-width: 575.98px) {  
+    /* styles for mobile devices */  
+}  
+
+/* Small devices (tablets) */  
+@media screen and (max-width: 767.98px) {  
+    /* styles for small tablets */  
+}  
+
+/* Medium devices (desktops) */  
+@media screen and (max-width: 991.98px) {  
+    /* styles for medium-sized desktops */  
+}  
+
+/* Large devices (large desktops) */  
+@media screen and (max-width: 1199.98px) {  
+    /* styles for large desktops */  
+}  
+
+/* Extra large devices (larger desktops) */  
+@media screen and (max-width: 1599.98px) {  
+    /* styles for extra large screens */  
+}
+
+.typing{
+    width: 200px;
+}
+.type{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+    overflow: hidden;
+    border-right: black solid 4px;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40, end) , blink-caret 0.5s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 98%;
+    }
+}
+@keyframes blink-caret{
+    from, to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: red;
+    }
+}
